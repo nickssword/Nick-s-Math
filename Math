@@ -95,7 +95,6 @@ end)
 
 local Button = MainTab:CreateButton({
    Name = "Aimbot",
-   Interact = 'Click',
    Callback = function()
        local Settings = {
     rewrittenmain = {
