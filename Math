@@ -44,13 +44,10 @@ Rayfield:Notify({
 },
 })
 
-local Button = Tab:CreateButton({
-   Name = "Button Example",
+local Button = MainTab:CreateButton({
+   Name = "ESP",
    Callback = function()
-   
--- Preview: https://cdn.discordapp.com/attachments/796378086446333984/818089455897542687/unknown.png
--- Made by Blissful#4992
-local Settings = {
+            local Settings = {
     Box_Color = Color3.fromRGB(255, 0, 0),
     Tracer_Color = Color3.fromRGB(255, 0, 0),
     Tracer_Thickness = 1,
