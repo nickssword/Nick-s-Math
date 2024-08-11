@@ -93,19 +93,6 @@ end)
    end,
 })
 
-local Slider = MainTab:CreateSlider({
-   Name = "WalkSpeed Slider",
-   Range = {1, 350},
-   Increment = 1,
-   Suffix = "Speed",
-   CurrentValue = 16,
-   Flag = "sliderws", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
-   end,
-})
-
-
 local Button = MainTab:CreateButton({
    Name = "Aimbot",
    Interact = 'Click',
@@ -477,5 +464,18 @@ end
 --// Load
 
 Load(); SendNotification(Title, "Aimbot script successfully loaded! Check the GitHub page on how to configure the script.", 5)
+   end,
+})
+
+local Input = Tab:CreateInput({
+   Name = "WalkSpeed",
+   PlaceholderText = "1-350",
+   NumbersOnly = true, -- If the user can only type numbers. Remove or set to false if none.
+   CharacterLimit = 15, --max character limit. Remove or set to false
+   OnEnter = true, -- Will callback only if the user pressed ENTER while being focused on the the box.
+   RemoveTextAfterFocusLost = false, -- Speaks for itself.
+   Callback = function(Text)
+         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+   end,
    end,
 })
